@@ -1,0 +1,53 @@
+:root {
+    --namecolor: black;
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    height: 80px;
+}
+
+.navbar li {
+    text-align: center;
+    border-bottom: 10x;
+    border-color: aqua;
+    color:aqua;
+    display:block;
+    padding: 5px;
+    margin: 10px;
+    float: right;
+}
+
+ 
+.navbar li a {
+    display: block;
+    text-decoration: none;
+    color: aqua;
+    border-bottom: 5px solid yellow;
+  }
+
+  
+  .navbar li a:hover {
+    color: yellow;
+  }
+
+
+  .name {
+    float: left;
+    color: var(--namecolor);
+    background-color: aqua;
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+    vertical-align: center;
+  }
+
+  .coolimage {
+    height: 150px;
+    width: 100%;
+    background-image: url(../images/technology-background-1632715.jpg);
+  }
