@@ -3,8 +3,8 @@
 }
 
 h2 {
-    padding: 10px;
-    color:coral
+    padding: 30px;
+    color:darkblue;
 }
 
 .navbar {
@@ -59,6 +59,40 @@ h2 {
     height: 150px;
     width: 100%;
     background-image: url(../images/technology-background-1632715.jpg);
+    color: white;
+    font-size: 20px;
+  }
+
+  .coolimage h2 {
+    float: right;
+    margin-top: 80px;
+    color: white;
+  }
+
+  .lefthandnav{
+    display: inline;
+    width: 20%;
+    float: left;
+    padding-left: 20px;
+    font-size: 35px;
+    /* border: 5px solid red; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }
+
+  .lefthandnav h2{
+    height: 300px;
+    color: darkblue;
+    border-right: 5px solid darkblue;
+    margin: 20px;
+  }
+
+  .main {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 20px;
+
   }
 
   .about{
@@ -66,18 +100,41 @@ h2 {
     justify-content: left;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin: 10px;
     /* border: 3px solid green; */
   }
 
+  .worksample{
+    font: 30px;
+    height: 340px;
+     border: 3px solid green; 
+     display: grid;
+     grid-template-rows: ;
+  }
+
+  .contactinfo{
+    display: flex;
+    flex-direction: row;
+    font: 30px;
+    color:blue;
+    height: 500px;
+    /* border: 3px solid green; */
+  }
+
+
   .pic {
     /*border: 5px solid black; */
+    padding-bottom: 0px;
+    height: 100%;
   }
   .bio {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: black;
-    background-color: beige;
+    /* background-color: black; */
     /*border: 5px solid red;*/
     width: 100%;
-    padding-left: 20px;
-    padding-top: 20px;
+    padding-left: 10px;
+    padding-top: 0px;
+    font-size: 25px;
+    vertical-align: top;
   }
