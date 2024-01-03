@@ -7,6 +7,12 @@ h2 {
     color:darkblue;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
 .navbar {
     list-style-type: none;
     padding: 0;
@@ -72,9 +78,11 @@ h2 {
   .lefthandnav{
     display: inline;
     width: 20%;
+    
     float: left;
-    padding-left: 20px;
-    font-size: 35px;
+    padding-left: 0px;
+    word-wrap: break-word;
+    font-size: 30px;
     /* border: 5px solid red; */
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
   }
@@ -83,15 +91,23 @@ h2 {
     height: 300px;
     color: darkblue;
     border-right: 5px solid darkblue;
-    margin: 20px;
+    margin: 10px;
+    min-width: 15%;
+    padding-top: 20px;
   }
 
   #work{
     height: 900px;
+    margin-top: 20px;
+  }
+
+  #aboutme{
+    height: 280px;
   }
 
   #contactme{
     height: 100px;
+    padding-top: 10px;
   }
 
   .main {
@@ -108,7 +124,8 @@ h2 {
     justify-content: left;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin: 10px;
+    /* margin:10px; */
+    height: 280px;
     /* border: 3px solid green; */
   }
 
@@ -117,12 +134,19 @@ h2 {
   .contactinfo{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:darkblue;
-    margin-top: 100px;
+    margin-top: 20px; /* increase margin on media quary*/
     justify-content: center;
+    /* height: 100px; */
     /* border: 3px solid green; */
+  }
+
+  .contactinfo a:visited, a:link{
+    color: darkblue;
+    text-decoration: none;
   }
 
   .telephone{
@@ -152,15 +176,25 @@ h2 {
     height: 100%;
   }
   .bio {
+    position: relative;
+    top: -20px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: black;
     /* background-color: black; */
     /*border: 5px solid red;*/
     width: 100%;
     padding-left: 10px;
-    padding-top: 0px;
-    font-size: 25px;
-    vertical-align: top;
+    padding-top: 10px;
+    padding: 20px;
+    font-size: 20px;
+    color: darkblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-y: auto;
+  }
+
+  .bio h2{
+    overflow: scroll;
+    max-height: 100%;
   }
 
 
@@ -243,32 +277,36 @@ h2 {
       'main main'
       'sample1 sample2'
       'sample3 sample4';
-    gap: 10px;
+    gap: 20px;
     /* background-color: #2196F3; */
-    padding: 10px;
+    padding: 0px;
+    padding-left: 10px;
     font: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 880px;
   }
 
-  .worksample2{
+  /* .worksample2{
     font: 30px;
     height: 340px;
      border: 3px solid green; 
      display: grid;
      grid-template-rows: ;
-  }
+  } */
 
   .overlaytext{
     position: relative;
-    top: -80px;
+    top: -120px;
     width: 30%;
     /*top: 50%; */
     background-color: aqua; 
     color: darkblue; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 10px 20px; 
-    font-size: 30px; 
+    font-size: 25px; 
     text-align: left;
+    overflow: clip;
     /* border: 3px solid yellow; */
   }
 
@@ -282,8 +320,9 @@ h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0px; 
     margin: 0px;
-    font-size: 30px; 
+    font-size: 25px; 
     text-align: left;
+    overflow: clip;
     /* border: 3px solid yellow; */
   }
 
@@ -291,6 +330,51 @@ h2 {
     font-size: 15px;
     font-family:Arial, Helvetica, sans-serif;
     margin-top: 5px;
+    overflow: clip;
   }
 
-   
+  /* stack work samples in a column when grid shrinks */
+  @media only screen and (max-width: 500px) {
+    .worksample {
+        display: grid;
+        grid-template-areas:
+          'main'
+          'sample1'
+          'sample2'
+          'sample3'
+          'sample4';
+    }
+
+    /* change flex direction of contact info to column for smaller screen */
+    .contactinfo {
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 400px;
+    }
+
+    .telephone{
+        width: 40%;
+        margin-left: 30px;
+      }
+    
+      .email {
+        width: 40%;
+      }
+    
+      .github {
+        width: 40%;
+      }
+    
+      .linkedin {
+        width: 40%;
+      }
+
+      /* increase height of work to account for stacked samples */
+      #work {
+        height: 1400px;
+      }
+
+      .worksample{
+        height: 1000px;
+      }
+  }
