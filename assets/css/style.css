@@ -2,7 +2,7 @@
 :root {
     --namecolor: black;
     --navbar: aqua;
-    --coolimagetext: white;
+    --coolimagetext: darkblue;
     --overlaytextbg: aqua;
     --overlaytext: darkblue;
     --gridborder: aqua;
@@ -79,8 +79,9 @@ img {
   .coolimagetext {
     float: right;
     margin-top: 80px;
+    background-color: aqua;
     color: var(--coolimagetext);
-    padding-right: 20px;
+    padding: 10px;
     font-size: 25px;
   }
 
@@ -94,6 +95,7 @@ img {
     word-wrap:break-word;
     font-size: 30px;
     font-family: var(--leftnavfont);
+    font-weight: bold;
   }
 
   #work{
@@ -173,6 +175,7 @@ img {
     grid-area: sample4; height: 200px; border: 5px solid var(--gridborder) ;
 }
 
+/*Change opacity on work sample images on hover */
 .mainsample img{
     height: 100%;
     width: 100%;
@@ -180,8 +183,6 @@ img {
 }
 
 .mainsample:hover img{
-    height: 100%;
-    width: 100%;
     opacity: 1;
 }
 
@@ -244,7 +245,7 @@ img {
   .overlaytext{
     position: relative;
     top: -120px;
-    width: 30%;
+    width: 40%;
     /*top: 50%; */
     background-color: var(--overlaytextbg); 
     color: var(--overlaytext); 
